@@ -1,2 +1,2 @@
-a, b = map(int, input())
+a,b = map(int, input())
 print(a,b)
