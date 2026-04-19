@@ -1,6 +1,3 @@
-mal 0
-femal 1
-19> adlut
 
 gender = int(input())
 age = int(input())
