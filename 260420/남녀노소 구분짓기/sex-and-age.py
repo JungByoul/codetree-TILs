@@ -1,0 +1,17 @@
+mal 0
+femal 1
+19> adlut
+
+gender = int(input())
+age = int(input())
+
+if gender:
+    if age >= 19:
+        print('WOMAN')
+    else:
+        print('GIRL')
+else:
+    if age >= 19:
+        print('MAN')
+    else:
+        print('BOY')
