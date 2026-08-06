@@ -6,15 +6,16 @@ for _ in range(N):
 max_cnt = -1
 cnt = 0
 
-# basket =list(inp_list[0]) #첫번째 거 담기. 에러남
+# basket =list(inp_list[0]) #첫번째 거 담기  에러남. iterable 이거 공유해야함
 if N == 1:
     print(1)
-else:
+else: #N이 2이상
     for idx, elem in enumerate(inp_list):
         #case0. 일단 첫번째꺼는 담아야함
         if idx == 0:
             cnt = 1
         #case1. 직전이랑 같은 부호면 계속 담기(이렇게 마지막에 끝나면? ->for문 밖에 추가해주자)
+            #elif가 아니라 if를 했더니, inp_list[idx-1]이 inp_list[-1]이 돼서 1을 한번 추가하고 시작하게 됨!@!
         elif (elem > 0 and inp_list[idx-1] > 0 ) or (elem < 0 and inp_list[idx-1] < 0): #0아니랬음 고려안해도됨
             cnt += 1
 
